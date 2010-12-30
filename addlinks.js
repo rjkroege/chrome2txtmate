@@ -56,6 +56,7 @@ function makeTxtMateUrl(p, l) {
  */
 function openInTextMate(u) {
   window.console.info('url: ' + u);
+  window.location = u;
 }
 
 /**
@@ -67,7 +68,7 @@ function onArbitraryClick (e) {
     // Rip apart the URL that codesearch so nicely provides for us.
     var u = e.target.href;
     dici = parseCSurl(u);
-    openInTextMate(makeTxtMateUrl(dici['hi'], dici['l']));
+    openInTextMate(makeTxtMateUrl(dici['hl'], dici['l']));
   }
 }
 
