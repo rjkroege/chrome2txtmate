@@ -7,25 +7,6 @@
   TODO(rjkroege): Insert some kind of licensing drivel here.
 */
 
-
-// Obsolete. 
-// TODO(rjkroege): Remove this if it proves to not be necessary.
-/**
- * Dredge through the file diddling the links.
- */
-function addLinks() {
-  alert('foo on you Rob');
-  
-  targets = document.querySelectorAll('.GOYGFLXBM-');
-  Array.prototype.forEach.call(targets, function (v) {
-    window.console.info(v.innerText);
-  });
-  
-  alert('length: ' + targets.length);
-}
-
-// addLinks();
-
 /**
  * Parse a Google code sense URL into a dictionary of parameters.
  */
@@ -82,28 +63,12 @@ function openInTextMate(u) {
  * by jumping to a textmate URL.
  */
 function onArbitraryClick (e) {
-  // window.console.info('hello from the click handler');
-  // window.console.info('click: ' + e.target);
-  // window.console.info('click: ' + findParentElement(e.target.parentNode));
   if (findParentElement(e.target.parentNode).className == 'GOYGFLXBM-') {
-    // we have in theory clicked on something that matches the intended pattern.
-    
-    // Debugging... remove this.
-    // window.console.info('Giant Bunnies')
-    // alert('clicked on a number, target: ' + e.target.href);
-
     // Rip apart the URL that codesearch so nicely provides for us.
     var u = e.target.href;
     dici = parseCSurl(u);
-    //window.console.info('params: ' + dici['hl'] + ' ' + dici['l']);
-    // window.console.info('newpath: ' + stripDrivel(dici['hl']));
-  
-
     openInTextMate(makeTxtMateUrl(dici['hi'], dici['l']));
-    
   }
 }
 
-
-// document.addEventListener("click", onArbitraryClick);
 document.addEventListener('mouseup', onArbitraryClick);
