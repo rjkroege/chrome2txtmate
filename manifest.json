@@ -1,0 +1,31 @@
+{
+  // TODO(rjkroege): Fill this in later.
+
+  // Required
+  "name": "CodeSearch2TextMate",
+  "version": "1.0",
+
+  // Recommended
+  "description": "A page script that adds TextMate format URLs to Google Code Search results",
+//  "icons": { ... },
+// Enabling a locale requires a locale tree.
+//  "default_locale": "en",
+
+  // Add any of these that you need
+  "content_scripts": [
+    {
+      "matches": ["http://codesearch.google.com/*"],
+      // "css": ["mystyles.css"],
+      "js": ["addlinks.js"]
+    }
+  ],
+  "homepage_url": "http://drunkenpacket.posterous.com"
+  //"incognito": "spanning" or "split",
+  //"key": "publicKey",
+  //"minimum_chrome_version": "versionString",
+  //"omnibox": { "keyword" : "aString" },
+  //"options_page": "aFile.html",
+  //"permissions": [...],
+  //"plugins": [...],
+  //"update_url": "http://path/to/updateInfo.xml"
+}
