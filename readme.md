@@ -16,12 +16,21 @@ if I use this regularly, it won't be a problem 'cause I'll update it regularly.
 
 Basic Chrome Extension
 ===
-I 
+I have now built. Now, I must decide what comes next.
 
+1. I want a configurator for the value to inject for the lookup. It would be a 
+simple web page where we can enter the path containing src. (I might want to
+think about generalizing.)
 
+    i.  need a nice UX
+    
+    ii.  need a way to store per-machine state (cookie?)
 
+2. I want to package it up as a crx file.
 
+3. I want to put the crx file on drunkenpacket
 
+4. I want to share the crx with the chromium mailing list.
 
 
 Aside
