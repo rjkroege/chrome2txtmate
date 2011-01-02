@@ -19,12 +19,12 @@
       "js": ["addlinks.js"]
     }
   ],
-  "homepage_url": "http://drunkenpacket.posterous.com"
+  "homepage_url": "http://drunkenpacket.posterous.com",
   //"incognito": "spanning" or "split",
   //"key": "publicKey",
   //"minimum_chrome_version": "versionString",
   //"omnibox": { "keyword" : "aString" },
-  //"options_page": "aFile.html",
+  "options_page": "options.html"
   //"permissions": [...],
   //"plugins": [...],
   //"update_url": "http://path/to/updateInfo.xml"

@@ -1,0 +1,30 @@
+<html>
+<header>
+  <title>Set location of Chrome source</title>
+  <!-- insert some styles here -->
+  <link href="options.css" rel="stylesheet" type="text/css" />
+  
+</header>
+<body>
+  <!-- Could insert something fancier here as styling -->
+  <div>Configuration</div>
+  <table>
+    <tr>
+      <td>Chromium is always checked out as <code>src</code>. Enter the directory
+      containing <code>src</code> in the text field.</td>
+      <!-- look up how to scale the control -->
+      <td><input id="srcLocation" width="30"></input></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+        <button id="saveButton">Save</button>
+      </td>
+    </tr>
+  </table>
+  <script src="options.js" language="javascript" type="text/javascript"></script>
+  <script>
+    main();
+  </script>
+</body>
+</html>

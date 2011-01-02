@@ -40,12 +40,10 @@ function stripDrivel (p) {
   return p.replace(/.*src\//, 'src/');
 }
 
-// The directory that contains the chrome src.
-// Can we read an environment variable from an extension?
-var CHROME_ROOT = '~/tools/g/';
+var properties;
 
 function makeTxtMateUrl(p, l) {
-  var u = 'txmt://open/?url=file://' + CHROME_ROOT; // '~/.bash_profile&line=11&column=2';
+  var u = 'txmt://open/?url=file://' + properties.srcLocation + '/';
   u += p.replace(/.*src\//, 'src/');
   u += '&line=' + l;
   return u;
@@ -73,3 +71,18 @@ function onArbitraryClick (e) {
 }
 
 document.addEventListener('mouseup', onArbitraryClick);
+
+/**
+ * Get properties from the options page.
+ * Do this onload.
+ */
+function getTheProperties(argument) {
+  chrome.extension.sendRequest({greeting: "hello"}, function(response) {
+    // Make this actually ship the properties.
+    properties = response;
+    console.log(response.srcLocation);
+  });
+}
+
+// Actually get some properties.
+getTheProperties();
