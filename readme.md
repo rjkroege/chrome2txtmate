@@ -28,7 +28,7 @@ think about generalizing.)
 
 2. I want to package it up as a crx file.
 
-3. I want to put the crx file on drunkenpacket
+3. I want to put the crx file on drunkenpkt.
 
 4. I want to share the crx with the chromium mailing list.
 
