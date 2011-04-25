@@ -1,13 +1,16 @@
 A chrome extension to make links in Google code search to open files in markdown.
+Do a search in [Google Code Search](http://codesearch.google.com/codesearch?vert=chromium), have
+a local checkout of Chrome and click on a line number to open the appropriate file in
+Textmate. Sort of spiffy. Doesn't always seem to work.
 
-Overview of the task
+Overview of the Implementation
 ===
 
 *  Find the appropriate UI elements in CS that should be outbound links
-*  Replace the markup with textmate url scheme links  
+*  Replace the markup with [textmate url scheme links](http://blog.macromates.com/2007/the-textmate-url-scheme/)  
 *  Have some markup to set the base.
 *  Sign the thinger 
-*  Push to the Chrome extension app store
+*  Push to the Chrome extension app store (sure...)
 
 CS UI Element
 ===
@@ -32,32 +35,8 @@ think about generalizing.)
 
 4. I want to share the crx with the chromium mailing list.
 
-
-Aside
-===
-An editor inline as a Chrome extension would permit editing code with respect to the 
-contents of the code search interface. The code search interface gives the IDE 
-interface with navigation. Then click on a file to edit it. With high-lights.
-
-Obviously, we also would need a terminal window. The terminal would link-ify everything.
-And provide a rich tab-based auto-completed with some kind of semantic facility.
-And wily-style cut and paste.  One file/tab makes things easier: for example, I can
-use native undo.
-
-What about projects that don't have a google CS backend?  We could add a project navigator
-to the go backend. (The backend knows how to host wily commands, speaks 9p for the plan9
-types, etc.)
-
-This scheme means that the existing work is possibly usable sooner. In fact, the client
-side is almost entirely done in this vision. I should flesh it out. I can use divvy for
-window management. Or just have lots of tabs. And the PM summary tab: a popup window that
-provides an overview of the current CL. (Can prototype this in TextMate's web view?)
-
 Other Notes
 ===
 Might need to remove duplicate Chrome tabs: [duplicate tab
 detector](https://github.com/mbhutton/chrome-duplicate-tab-detector)
-
-
-
 
